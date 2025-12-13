@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Class</title>
+    <link rel="stylesheet" type="text/css" href="/FitBookmain.css" />
+</head>
+<body>
+    <h1>Add New Class</h1>
+
+    <form method="POST" action="/admin/classes/add">
+        <input name="name" placeholder="Class Name" required>
+        <input name="instructor" placeholder="Instructor" required>
+        <input type="datetime-local" name="datetime" required>
+        <input type="number" name="duration" placeholder="Duration (mins)" required>
+        <input name="difficulty" placeholder="Difficulty">
+
+        <button type="submit">Add Class</button>
+    </form>
+
+    <a href="/admin/classes">Back</a>
+</body>
+</html>

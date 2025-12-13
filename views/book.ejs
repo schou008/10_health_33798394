@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book a Class</title>
+    <link rel="stylesheet" type="text/css" href="/FitBookmain.css" />
+</head>
+<body>
+    <header>
+        <h1>Available Classes</h1>
+    </header>
+    <main>
+        <% if (classes.length === 0) { %>
+            <p>No classes available.</p>
+        <% } else { %>
+            <ul>
+                <% classes.forEach(c => { %>
+                    <li>
+                        <strong><%= c.name %></strong> by <%= c.instructor %> <br>
+                        Date: <%= c.datetime.toLocaleString() %> <br>
+                        Duration: <%= c.duration %> mins | Difficulty: <%= c.difficulty %> <br>
+                        
+                        <a href="/bookings/book/<%= c.class_id %>">Book this class</a>
+                    </li>
+                    <hr>
+                <% }) %>
+            </ul>
+        <% } %>
+    </main>
+</body>
+</html>

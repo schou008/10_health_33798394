@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Classes</title>
+    <link rel="stylesheet" type="text/css" href="/FitBookmain.css" />
+</head>
+<body>
+    <h1>Manage Classes</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Instructor</th>
+                <th>Date & Time</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% classes.forEach(c => { %>
+                <tr>
+                    <td><%= c.name %></td>
+                    <td><%= c.instructor %></td>
+                    <td><%= new Date(c.datetime).toLocaleString() %></td>
+                    <td>
+                        <a href="/admin/classes/edit/<%= c.class_id %>">Edit</a> |
+                        <a href="/admin/classes/delete/<%= c.class_id %>">Delete</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+    <a href="/admin/dashboard">Back</a>
+</body>
+</html>

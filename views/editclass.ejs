@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Class</title>
+    <link rel="stylesheet" type="text/css" href="/FitBookmain.css" />
+</head>
+<body>
+    <h1>Edit Class</h1>
+
+    <form method="POST" action="/admin/classes/edit/<%= classItem.class_id %>">
+        <input name="name" value="<%= classItem.name %>" required>
+        <input name="instructor" value="<%= classItem.instructor %>" required>
+        <input type="datetime-local" name="datetime"
+               value="<%= classItem.datetime.toISOString().slice(0,16) %>" required>
+        <input name="duration" value="<%= classItem.duration %>" required>
+        <input name="difficulty" value="<%= classItem.difficulty %>">
+
+        <button type="submit">Save Changes</button>
+    </form>
+
+    <a href="/admin/classes">Back</a>
+</body>
+</html>

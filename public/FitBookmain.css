@@ -1,0 +1,192 @@
+/*Global Page Styling*/
+:root {
+    --primary: #2ecc71;
+    --primary-dark: #27ae60;
+    --accent: #3498db;
+    --bg-light: #f4f6f7;
+    --bg-white: #ffffff;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+    --radius: 12px;
+    --shadow: 0 4px 12px rgba(0,0,0,0.08);
+    --transition: 0.25s ease;
+    --font: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    background: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/*Navigation Bar */
+nav {
+    background: var(--primary);
+    padding: 15px 30px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+/*Containers*/
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/*Headings*/
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/*Card UI*/
+.card {
+    background: var(--bg-white);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/*Buttons & Links*/
+button, .btn {
+    padding: 12px 18px;
+    border-radius: var(--radius);
+    background: var(--primary);
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+button:hover, .btn:hover {
+    background: var(--primary-dark);
+}
+
+a.btn-link {
+    background: var(--accent);
+    color: white !important;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+a.btn-link:hover {
+    opacity: 0.8;
+}
+
+/*Forms*/
+form {
+    background: var(--bg-white);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border-radius: var(--radius);
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 5px rgba(46, 204, 113, 0.3);
+}
+
+/*Table*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-white);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 14px;
+    text-align: left;
+}
+
+table th {
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+}
+
+table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/*Class Detail Page*/
+.class-header {
+    background: var(--primary);
+    padding: 25px;
+    color: white;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+}
+
+.class-description {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/*Footer*/
+footer {
+    margin-top: 40px;
+    padding: 15px;
+    background: var(--primary);
+    color: white;
+    text-align: center;
+}
+
+/*Responsive UI*/
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav a {
+        margin: 10px 0;
+    }
+    .container {
+        padding: 10px;
+    }
+}

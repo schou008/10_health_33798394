@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Log</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" type="text/css" href="/FitBookmain.css" />
+</head>
+<body>
+    <h2>Audit Log</h2>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Username</th>
+            <th>Success</th>
+            <th>Timestamp</th>
+        </tr>
+
+        <% audit.forEach(function(entry) { %>
+            <tr>
+                <td><%= entry.username %></td>
+                <td><%= entry.success ? "Success" : "Failed" %></td>
+                <td><%= entry.timestamp %></td>
+            </tr>
+        <% }) %>
+    </table>
+</body>
+</html>

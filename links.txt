@@ -1,0 +1,12 @@
+home=https://www.doc.gold.ac.uk/usr/376/
+about=https://www.doc.gold.ac.uk/usr/376/about
+register=https://www.doc.gold.ac.uk/usr/376/users/register
+login=https://www.doc.gold.ac.uk/usr/376/users/login
+book=https://www.doc.gold.ac.uk/usr/376/bookings/book
+viewbookings=https://www.doc.gold.ac.uk/usr/376/bookings/viewbookings
+search=https://www.doc.gold.ac.uk/usr/376/classes/search
+list=https://www.doc.gold.ac.uk/usr/376/classes/list
+audit=https://www.doc.gold.ac.uk/usr/376/users/audit
+adminlogin=https://www.doc.gold.ac.uk/usr/376/admin/login
+dashboard=https://www.doc.gold.ac.uk/usr/376/admin/dashboard
+logout=https://www.doc.gold.ac.uk/usr/376/logout

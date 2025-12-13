@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitBook Classes</title>
+    <link rel="stylesheet" type="text/css" href="/FitBookmain.css" />
+</head>
+<body>
+    <header>
+        <h1>FitBook Classes</h1>
+    </header>
+    <main>
+        <h2>All Available Classes</h2>
+
+        <% if (classes.length === 0) { %>
+            <p>No classes available at the moment.</p>
+        <% } else { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Instructor</th>
+                        <th>Date & Time</th>
+                        <th>Duration (mins)</th>
+                        <th>Difficulty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% classes.forEach(function(c) { %>
+                        <tr>
+                            <td><%= c.class_id %></td>
+                            <td><%= c.name %></td>
+                            <td><%= c.instructor %></td>
+                            <td><%= new Date(c.datetime).toLocaleString() %></td>
+                            <td><%= c.duration %></td>
+                            <td><%= c.difficulty %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        <% } %>
+    </main>
+</body>
+</html>
+

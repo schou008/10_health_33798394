@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Classes</title>
+    <link rel="stylesheet" type="text/css" href="/FitBookmain.css" />
+</head>
+<body>
+    <header>
+        <h1>Search Classes</h1>
+    </header>
+
+    <main>
+        <form action="/classes/search-result" method="GET">
+            <p>What class are you looking for?</p>
+
+            <!-- Use term as the query param -->
+            <input id="search-box" type="text" name="term" required>
+
+            <input type="submit" value="Search Classes">
+        </form>
+    </main>
+</body>
+</html>

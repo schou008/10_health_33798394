@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings</title>
+    <link rel="stylesheet" type="text/css" href="/FitBookmain.css" />
+</head>
+<body>
+    <h1>My Bookings</h1>
+
+    <% if (bookings.length > 0) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Booking ID</th>
+                    <th>Class Name</th>
+                    <th>Date & Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% bookings.forEach(booking => { %>
+                    <tr>
+                        <td><%= booking.bookingId %></td>
+                        <td><%= booking.className %></td>
+                        <td><%= new Date(booking.classDate).toLocaleString() %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <p class="no-bookings">You have no bookings yet.</p>
+    <% } %>
+</body>
+</html>

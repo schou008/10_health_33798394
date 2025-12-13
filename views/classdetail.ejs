@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Class</title>
+    <link rel="stylesheet"  type="text/css" href="/FitBookmain.css" />
+</head>
+<body>
+    <header>
+        <h1>Book Class: <%= classItem.name %></h1>
+    </header>
+    <main>
+        <p><strong>Instructor:</strong> <%= classItem.instructor %></p>
+        <p><strong>Date & Time:</strong> <%= classItem.datetime.toLocaleString() %></p>
+        <p><strong>Duration:</strong> <%= classItem.duration %> mins</p>
+        <p><strong>Difficulty:</strong> <%= classItem.difficulty %></p>
+
+        <h2>Enter your details to book:</h2>
+        <form action="/bookings/booked" method="POST">
+            <input type="hidden" name="class_id" value="<%= classItem.class_id %>">
+            <button type="submit">Book This Class</button>
+        </form>
+    </main>
+</body>
+</html>
