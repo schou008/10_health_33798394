@@ -12,6 +12,6 @@ INSERT INTO classes (name, instructor, datetime, duration, capacity, difficulty)
 ('Pilates', 'Clara Core', '2025-12-16 09:30:00', 50, 10, 'Beginner'),
 ('Zumba', 'Darren Dance', '2025-12-16 19:00:00', 50, 20, 'All levels');
 
-INSERT INTO bookings (class_id, name, email) VALUES
-(1, 'Test User', 'test1@example.com'),
-(1, 'Another User', 'test2@example.com');
+INSERT INTO bookings (class_id, name) VALUES
+(1, 'Test User'),
+(1, 'Another User');
