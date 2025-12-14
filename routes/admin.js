@@ -19,7 +19,7 @@ router.post('/login', (req, res) => {
     const { username, password } = req.body;
     if (username === 'gold' && password === 'smiths') {
         req.session.admin = true;
-        res.redirect('/admin/dashboard');
+        return res.send("Admin login successful. You may now access admin pages.");
     } else {
         res.send("Invalid admin credentials");
     }
