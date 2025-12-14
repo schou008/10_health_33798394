@@ -5,7 +5,7 @@ const router = express.Router();
 //Admin auth middleware
 const adminOnly = (req, res, next) => {
     if (!req.session.admin) {
-        return res.redirect('/admin/login');
+        return res.redirect('./login');
     }
     next();
 };
