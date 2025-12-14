@@ -8,11 +8,11 @@ const { check, validationResult } = require("express-validator");
 //Redirect middleware
 const redirectLogin = (req, res, next) => {
     if (!req.session.userId) {
-        return res.redirect('users/login');
+        return res.redirect('/users/login');
     } else {
     next();
     }
-};
+}
 
 //Show Class Details
 router.get('/book/:id', redirectLogin, function(req, res, next) {
