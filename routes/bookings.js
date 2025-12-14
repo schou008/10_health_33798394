@@ -8,7 +8,7 @@ const { check, validationResult } = require("express-validator");
 //Redirect middleware
 const redirectLogin = (req, res, next) => {
     if (!req.session.userId) {
-        return res.redirect('/users/login');
+        return res.redirect('users/login');
     } else {
     next();
     }

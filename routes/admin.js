@@ -5,7 +5,7 @@ const router = express.Router();
 //Admin auth middleware
 const adminOnly = (req, res, next) => {
     if (!req.session.admin) {
-        return res.redirect('/admin/login');
+        return res.redirect('admin/login');
     }
     next();
 };
@@ -96,7 +96,7 @@ router.get('/classes/delete/:id', adminOnly, (req, res, next) => {
 //Logout
 router.get('/logout', (req, res) => {
     req.session.admin = null;
-    res.redirect('/admin/login');
+    res.redirect('admin/login');
 });
 
 module.exports = router;
