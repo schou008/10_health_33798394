@@ -96,7 +96,7 @@ router.get('/classes/delete/:id', adminOnly, (req, res, next) => {
 //Logout
 router.get('/logout', (req, res) => {
     req.session.admin = null;
-    res.redirect('admin/login');
+    res.redirect('./login');
 });
 
 module.exports = router;
